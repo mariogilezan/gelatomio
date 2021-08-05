@@ -1,7 +1,8 @@
 import React from "react"
+import { GlobalStyle } from "../../styles/globalStyles"
 import Footer from "../Footer/Footer"
 import Navbar from "../Navbar/Navbar"
-import { Content, GlobalStyle, Wrapper } from "./Layout.elements"
+import { Content, Wrapper } from "./Layout.elements"
 
 export default function Layout({ children }) {
   return (

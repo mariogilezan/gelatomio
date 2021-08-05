@@ -1,13 +1,13 @@
 import styled from "styled-components"
-import { Container } from "../Layout/Layout.elements"
+import { Link } from "gatsby"
+import { Container } from "../../styles/globalStyles"
 
 export const Nav = styled.nav`
-  background: #101522;
   height: 80px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-size: 1.2rem;
+  font-size: 1rem;
   position: sticky;
   top: 0;
   z-index: 999;
@@ -21,23 +21,31 @@ export const NavContainer = styled(Container)`
   ${Container}
 `
 
-export const NavList = styled.ul`
-  list-style: none;
-  color: #fefefe;
+export const Logo = styled(Link)`
   display: flex;
-`
-
-export const NavLink = styled.li`
-  margin: 0 0.5rem;
+  align-items: center;
+  width: 8.5rem;
+  height: 3rem;
   cursor: pointer;
-  transition: color 0.25s;
-  &:hover {
-    color: #f00;
+  img {
+    width: 100%;
   }
 `
 
-export const Logo = styled.h1`
-  font-size: 2.5rem;
-  font-weight: bold;
-  color: #f00;
+export const NavList = styled.ul`
+  list-style: none;
+  width: 75%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+`
+
+export const NavLink = styled.li`
+  border-bottom: 4px solid transparent;
+  padding-bottom: 2px;
+  cursor: pointer;
+  transition: border-color 0.25s;
+  &:hover {
+    border-color: #f00;
+  }
 `

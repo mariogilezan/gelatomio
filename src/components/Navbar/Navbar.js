@@ -1,26 +1,21 @@
 import React from "react"
 import { Logo, Nav, NavContainer, NavLink, NavList } from "./Navbar.elements"
-
-const menuLinks = [
-  "Početna",
-  "O Nama",
-  "Torte",
-  "Kolači",
-  "Macaroons",
-  "Sladoled",
-  "Galerija",
-  "Kontakt",
-]
+import { useSiteMetadata } from "../../hooks/useSiteMetadata"
+import logoImg from "../../images/logo.png"
 
 export default function Navbar() {
+  const { menuLinks } = useSiteMetadata()
+
   return (
     <>
       <Nav>
         <NavContainer>
-          <Logo>Logo</Logo>
+          <Logo to="/">
+            <img src={logoImg} alt="Page logo" />
+          </Logo>
           <NavList>
             {menuLinks.map(link => (
-              <NavLink key={link}>{link}</NavLink>
+              <NavLink key={link.name}>{link.name}</NavLink>
             ))}
           </NavList>
         </NavContainer>
