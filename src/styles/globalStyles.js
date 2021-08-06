@@ -1,7 +1,9 @@
 import styled, { createGlobalStyle } from "styled-components"
 
 export const GlobalStyle = createGlobalStyle`
-  *, *::before, *::after {
+  *, 
+  *::before, 
+  *::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;

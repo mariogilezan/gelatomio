@@ -3,7 +3,8 @@ import { Link } from "gatsby"
 import { Container } from "../../styles/globalStyles"
 
 export const Nav = styled.nav`
-  height: 80px;
+  background: #fefefe;
+  height: 60px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -38,9 +39,14 @@ export const NavList = styled.ul`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  @media screen and (max-width: 800px) {
+    display: none;
+  }
 `
 
-export const NavLink = styled.li`
+export const NavLink = styled(Link)`
+  color: #222;
+  text-decoration: none;
   border-bottom: 4px solid transparent;
   padding-bottom: 2px;
   cursor: pointer;

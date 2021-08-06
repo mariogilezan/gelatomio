@@ -15,7 +15,11 @@ export default function Navbar() {
           </Logo>
           <NavList>
             {menuLinks.map(link => (
-              <NavLink key={link.name}>{link.name}</NavLink>
+              <li key={link.name}>
+                <NavLink to={link.slug} activeStyle={{ borderColor: "#f00" }}>
+                  {link.name}
+                </NavLink>
+              </li>
             ))}
           </NavList>
         </NavContainer>
