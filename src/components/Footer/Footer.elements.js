@@ -48,7 +48,7 @@ export const FeatureSocials = styled.div`
 `
 
 export const SocialLink = styled(SocialIcon)`
-  margin-right: ${props => props.marginRight && "0.7rem"};
+  margin-right: ${props => props.mr && "0.7rem"};
   transition: transform 0.25s;
   &:hover {
     transform: rotate(360deg) scale(1.1);

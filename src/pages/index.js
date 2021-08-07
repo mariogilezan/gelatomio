@@ -1,6 +1,14 @@
 import React from "react"
-import { Layout } from "../components"
+import { Layout, Seo } from "../components"
 
-export default function Home() {
-  return <Layout>This is the Home page</Layout>
+export default function Home({ location }) {
+  const siteTitle = "Početna"
+  const { pathname } = location
+
+  return (
+    <Layout location={location}>
+      <Seo title={siteTitle} pathname={pathname} />
+      <p>Home Page</p>
+    </Layout>
+  )
 }

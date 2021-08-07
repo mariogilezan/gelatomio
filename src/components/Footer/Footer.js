@@ -42,7 +42,7 @@ export default function Footer() {
             <SocialLink
               url="https://www.facebook.com/poslasticarnica.gelato/"
               style={{ width: 40, height: 40 }}
-              marginRight
+              mr="true"
               target="_blank"
             />
             <SocialLink

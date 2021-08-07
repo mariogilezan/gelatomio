@@ -13,7 +13,7 @@ module.exports = {
       },
       {
         name: `O Nama`,
-        slug: `/o_nama/`,
+        slug: `/o-nama/`,
       },
       {
         name: `Torte`,
