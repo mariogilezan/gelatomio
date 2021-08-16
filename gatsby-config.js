@@ -24,8 +24,8 @@ module.exports = {
         slug: `/kolaci/`,
       },
       {
-        name: `Macaroons`,
-        slug: `/macaroons/`,
+        name: `Macarons`,
+        slug: `/macarons/`,
       },
       {
         name: `Sladoled`,
