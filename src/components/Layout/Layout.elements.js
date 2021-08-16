@@ -7,6 +7,6 @@ export const Wrapper = styled.div`
   min-height: 100vh;
 `
 export const Content = styled.main`
-  margin-top: 8rem;
-  margin-bottom: 3rem;
+  padding-top: 0rem;
+  padding-bottom: 0rem;
 `

@@ -23,7 +23,7 @@ export const FooterFeatures = styled(Container)`
 export const FeatureCard = styled.div`
   display: flex;
   flex-direction: column;
-  padding: 3rem 0 2rem;
+  padding: 2rem 0;
   @media screen and (max-width: 720px) {
     text-align: center;
     align-items: center;
