@@ -61,7 +61,7 @@ export const HeroButtonsContainer = styled.div`
 export const HeroButton = styled(Link)`
   color: ${props => (props.redColor ? "#f00" : "#fefefe")};
   background-color: ${props => (props.redBgColor ? "#f00" : "#fefefe")};
-  margin-right: ${props => (props.mr ? "1rem" : 0)};
+  margin-right: ${props => props.mr && "1rem"};
   width: 10rem;
   font-weight: bold;
   display: inline-block;

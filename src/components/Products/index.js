@@ -15,7 +15,7 @@ export default function Products() {
     <ProductsWrapper>
       <ProductsHeading>Pogledajte našu ponudu</ProductsHeading>
       <ProductCardsContainer>
-        <ProductCard to="/torte">
+        <ProductCard to="/torte/">
           <ProductCardImageContainer>
             <StaticImage src="../../images/cake.jpg" placeholder="blurred" />
           </ProductCardImageContainer>
@@ -24,7 +24,7 @@ export default function Products() {
             Upoznajte se detaljnije sa našim tortama!
           </ProductCardDescription>
         </ProductCard>
-        <ProductCard to="/kolaci">
+        <ProductCard to="/kolaci/">
           <ProductCardImageContainer>
             <StaticImage
               src="../../images/cup-cake.jpg"
@@ -36,7 +36,7 @@ export default function Products() {
             Bogata ponuda kolača svih vrsta i veličina
           </ProductCardDescription>
         </ProductCard>
-        <ProductCard to="/sladoled">
+        <ProductCard to="/sladoled/">
           <ProductCardImageContainer>
             <StaticImage
               src="../../images/ice-cream.jpg"
@@ -48,7 +48,7 @@ export default function Products() {
             Fenomenalan italijanski sladoled.
           </ProductCardDescription>
         </ProductCard>
-        <ProductCard to="/macarons">
+        <ProductCard to="/macarons/">
           <ProductCardImageContainer>
             <StaticImage
               src="../../images/macarons.jpg"

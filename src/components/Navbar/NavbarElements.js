@@ -44,7 +44,12 @@ export const NavList = styled.ul`
   }
 `
 
+export const NavItem = styled.li`
+  position: relative;
+`
+
 export const NavLink = styled(Link)`
+  position: relative;
   color: #222;
   text-decoration: none;
   border-bottom: 4px solid transparent;
@@ -53,5 +58,44 @@ export const NavLink = styled(Link)`
   transition: border-color 0.25s;
   &:hover {
     border-color: #f00;
+  }
+  &:hover + ul,
+  &:focus-within + ul {
+    display: flex;
+    visibility: visible;
+    opacity: 1;
+  }
+`
+
+export const DropDownArrow = styled.i`
+  position: absolute;
+  top: 6px;
+  right: -14px;
+  border: solid #222;
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  padding: 3px;
+  transform: rotate(45deg);
+`
+
+export const NavListSubMenu = styled.ul`
+  list-style: none;
+  min-width: 7rem;
+  background-color: #fff;
+  padding: 1rem;
+  position: absolute;
+  left: -1rem;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  display: none;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.25s ease;
+  &:hover,
+  &:focus {
+    display: flex;
+    visibility: visible;
+    opacity: 1;
   }
 `

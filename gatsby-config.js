@@ -16,20 +16,30 @@ module.exports = {
         slug: `/o-nama/`,
       },
       {
-        name: `Torte`,
-        slug: `/torte/`,
+        name: `Proizvodi`,
+        slug: `/proizvodi/`,
+        subMenu: [
+          {
+            name: `Torte`,
+            slug: `/torte/`,
+          },
+          {
+            name: `Kolači`,
+            slug: `/kolaci/`,
+          },
+          {
+            name: `Macarons`,
+            slug: `/macarons/`,
+          },
+          {
+            name: `Sladoled`,
+            slug: `/sladoled/`,
+          },
+        ],
       },
       {
-        name: `Kolači`,
-        slug: `/kolaci/`,
-      },
-      {
-        name: `Macarons`,
-        slug: `/macarons/`,
-      },
-      {
-        name: `Sladoled`,
-        slug: `/sladoled/`,
+        name: `Cenovnik`,
+        slug: `/cenovnik/`,
       },
       {
         name: `Galerija`,

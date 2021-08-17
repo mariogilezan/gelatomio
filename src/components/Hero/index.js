@@ -15,10 +15,10 @@ export default function Hero() {
       <HeroDetailsContainer>
         <HeroHeading>Naše majstorstvo za Vaše zadovoljstvo</HeroHeading>
         <HeroButtonsContainer>
-          <HeroButton to="/cenovnik" redBgColor mr>
+          <HeroButton to="/cenovnik/" redBgColor mr>
             Cenovnik
           </HeroButton>
-          <HeroButton to="/kontakt" redColor>
+          <HeroButton to="/kontakt/" redColor>
             Kontakt
           </HeroButton>
         </HeroButtonsContainer>
