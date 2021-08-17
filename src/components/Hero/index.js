@@ -6,7 +6,7 @@ import {
   HeroHeading,
   HeroImageContainer,
   HeroWrapper,
-} from "./Hero.elements"
+} from "./HeroElements"
 import { StaticImage } from "gatsby-plugin-image"
 
 export default function Hero() {

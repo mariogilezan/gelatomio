@@ -1,5 +1,5 @@
 import React from "react"
-import { Logo, Nav, NavContainer, NavLink, NavList } from "./Navbar.elements"
+import { Logo, Nav, NavContainer, NavLink, NavList } from "./NavbarElements"
 import { useSiteMetadata } from "../../hooks/useSiteMetadata"
 import logoImg from "../../images/logo.png"
 

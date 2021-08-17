@@ -10,7 +10,7 @@ import {
   FooterWrapper,
   PhoneLink,
   SocialLink,
-} from "./Footer.elements"
+} from "./FooterElements"
 
 export default function Footer() {
   return (

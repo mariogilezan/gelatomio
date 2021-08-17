@@ -1,7 +1,8 @@
 import React from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
-import { Layout, Seo } from "../components"
+import Layout from "../components/Layout"
+import Seo from "../components/Seo"
 
 const NotFoundWrapper = styled.div`
   width: 100%;

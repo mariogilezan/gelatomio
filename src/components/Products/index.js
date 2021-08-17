@@ -8,7 +8,7 @@ import {
   ProductCardsContainer,
   ProductsHeading,
   ProductsWrapper,
-} from "./Products.elements"
+} from "./ProductsElements"
 
 export default function Products() {
   return (
@@ -32,9 +32,9 @@ export default function Products() {
             />
           </ProductCardImageContainer>
           <ProductCardHeading>Kolači</ProductCardHeading>
-          <p className="ProductCardDescription">
+          <ProductCardDescription>
             Bogata ponuda kolača svih vrsta i veličina
-          </p>
+          </ProductCardDescription>
         </ProductCard>
         <ProductCard to="/sladoled">
           <ProductCardImageContainer>
@@ -44,9 +44,9 @@ export default function Products() {
             />
           </ProductCardImageContainer>
           <ProductCardHeading>Sladoled</ProductCardHeading>
-          <p className="ProductCardDescription">
+          <ProductCardDescription>
             Fenomenalan italijanski sladoled.
-          </p>
+          </ProductCardDescription>
         </ProductCard>
         <ProductCard to="/macarons">
           <ProductCardImageContainer>
@@ -56,9 +56,9 @@ export default function Products() {
             />
           </ProductCardImageContainer>
           <ProductCardHeading>Macarons</ProductCardHeading>
-          <p className="ProductCardDescription">
+          <ProductCardDescription>
             Veoma popularni i izuzetno ukusni macaroonsi.
-          </p>
+          </ProductCardDescription>
         </ProductCard>
       </ProductCardsContainer>
     </ProductsWrapper>

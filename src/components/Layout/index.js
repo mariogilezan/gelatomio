@@ -1,8 +1,8 @@
 import React from "react"
 import { GlobalStyle } from "../../styles/globalStyles"
-import Footer from "../Footer/Footer"
-import Navbar from "../Navbar/Navbar"
-import { Content, Wrapper } from "./Layout.elements"
+import Footer from "../Footer"
+import Navbar from "../Navbar"
+import { Content, Wrapper } from "./LayoutElements"
 
 export default function Layout({ location, children }) {
   const rootPath = `${__PATH_PREFIX__}/`
