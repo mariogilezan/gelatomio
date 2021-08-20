@@ -1,12 +1,12 @@
 import React from "react"
 import { StaticImage } from "gatsby-plugin-image"
 import {
-  DropDownArrow,
   Logo,
   Nav,
   NavContainer,
   NavItem,
   NavLink,
+  NavLinkDropdown,
   NavList,
   NavListSubMenu,
 } from "./NavbarElements"
@@ -22,28 +22,26 @@ export default function Navbar() {
           <Logo to="/">
             <StaticImage
               src="../../images/logo.png"
-              alt="Page logo"
+              alt="page logo"
               placeholder="blurred"
             />
           </Logo>
           <NavList>
             {menuLinks.map(link => (
               <NavItem key={link.name}>
-                <NavLink
-                  to={link.slug !== "/proizvodi/" ? link.slug : null}
-                  aria-haspopup={
-                    link.subMenu && link.subMenu.length > 0 ? true : false
-                  }
-                  activeStyle={{ borderColor: "#f00" }}
-                >
-                  {link.name === "Proizvodi" ? (
-                    <>
-                      {link.name} <DropDownArrow />
-                    </>
-                  ) : (
-                    link.name
-                  )}
-                </NavLink>
+                {link.name !== "Proizvodi" ? (
+                  <NavLink to={link.slug} activeStyle={{ borderColor: "#f00" }}>
+                    {link.name}
+                  </NavLink>
+                ) : (
+                  <NavLinkDropdown
+                    aria-haspopup={
+                      link.subMenu && link.subMenu.length > 0 ? true : false
+                    }
+                  >
+                    {link.name}
+                  </NavLinkDropdown>
+                )}
                 {link.subMenu && link.subMenu.length > 0 ? (
                   <NavListSubMenu aria-label="submenu">
                     {link.subMenu.map(subLink => (

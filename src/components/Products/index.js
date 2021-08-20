@@ -17,7 +17,11 @@ export default function Products() {
       <ProductCardsContainer>
         <ProductCard to="/torte/">
           <ProductCardImageContainer>
-            <StaticImage src="../../images/cake.jpg" placeholder="blurred" />
+            <StaticImage
+              src="../../images/cake.jpg"
+              placeholder="blurred"
+              alt="cake"
+            />
           </ProductCardImageContainer>
           <ProductCardHeading>Torte</ProductCardHeading>
           <ProductCardDescription>
@@ -29,6 +33,7 @@ export default function Products() {
             <StaticImage
               src="../../images/cup-cake.jpg"
               placeholder="blurred"
+              alt="cupcake"
             />
           </ProductCardImageContainer>
           <ProductCardHeading>Kolači</ProductCardHeading>
@@ -41,6 +46,7 @@ export default function Products() {
             <StaticImage
               src="../../images/ice-cream.jpg"
               placeholder="blurred"
+              alt="ice cream"
             />
           </ProductCardImageContainer>
           <ProductCardHeading>Sladoled</ProductCardHeading>
@@ -53,6 +59,7 @@ export default function Products() {
             <StaticImage
               src="../../images/macarons.jpg"
               placeholder="blurred"
+              alt="macarons"
             />
           </ProductCardImageContainer>
           <ProductCardHeading>Macarons</ProductCardHeading>

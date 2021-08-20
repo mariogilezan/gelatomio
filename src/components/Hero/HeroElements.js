@@ -59,8 +59,8 @@ export const HeroButtonsContainer = styled.div`
 `
 
 export const HeroButton = styled(Link)`
-  color: ${props => (props.redColor ? "#f00" : "#fefefe")};
-  background-color: ${props => (props.redBgColor ? "#f00" : "#fefefe")};
+  color: ${props => (props.redcolor ? "#f00" : "#fefefe")};
+  background-color: ${props => (props.redbgcolor ? "#f00" : "#fefefe")};
   margin-right: ${props => props.mr && "1rem"};
   width: 10rem;
   font-weight: bold;
@@ -72,8 +72,8 @@ export const HeroButton = styled(Link)`
   border: 3px solid #f00;
   transition: color 0.25s, background-color 0.25s;
   &:hover {
-    color: ${props => (props.redColor ? "#fefefe" : "#f00")};
-    background-color: ${props => (props.redBgColor ? "#fefefe" : "#f00")};
+    color: ${props => (props.redcolor ? "#fefefe" : "#f00")};
+    background-color: ${props => (props.redbgcolor ? "#fefefe" : "#f00")};
   }
 
   @media screen and (max-width: 500px) {

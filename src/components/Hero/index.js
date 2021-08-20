@@ -15,10 +15,10 @@ export default function Hero() {
       <HeroDetailsContainer>
         <HeroHeading>Naše majstorstvo za Vaše zadovoljstvo</HeroHeading>
         <HeroButtonsContainer>
-          <HeroButton to="/cenovnik/" redBgColor mr>
+          <HeroButton to="/cenovnik/" redbgcolor="true" mr="true">
             Cenovnik
           </HeroButton>
-          <HeroButton to="/kontakt/" redColor>
+          <HeroButton to="/kontakt/" redcolor="true">
             Kontakt
           </HeroButton>
         </HeroButtonsContainer>
@@ -26,7 +26,7 @@ export default function Hero() {
       <HeroImageContainer>
         <StaticImage
           src="../../images/hero.jpg"
-          alt="Cake img for hero section"
+          alt="cake hero image"
           placeholder="blurred"
         />
       </HeroImageContainer>
