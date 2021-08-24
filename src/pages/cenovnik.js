@@ -1,5 +1,6 @@
 import React from "react"
 import Layout from "../components/Layout"
+import PricingSection from "../components/PricingSection"
 import Seo from "../components/Seo"
 
 export default function Cenovnik({ location }) {
@@ -9,7 +10,7 @@ export default function Cenovnik({ location }) {
   return (
     <Layout location={location}>
       <Seo title={siteTitle} pathname={pathname} />
-      <h1>Cenovnik</h1>
+      <PricingSection />
     </Layout>
   )
 }
