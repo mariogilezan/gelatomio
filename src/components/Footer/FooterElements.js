@@ -33,6 +33,7 @@ export const FeatureCard = styled.div`
 export const FeatureHeading = styled.h2`
   font-family: "Great Vibes", cursive;
   font-size: 2.25rem;
+  font-weight: normal;
   margin-bottom: 1.5rem;
   @media screen and (max-width: 720px) {
     margin-bottom: 1rem;

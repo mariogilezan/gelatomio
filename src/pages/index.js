@@ -1,5 +1,4 @@
 import React from "react"
-// import { Hero, Layout, Products, Seo } from "../components"
 import Hero from "../components/Hero"
 import Layout from "../components/Layout"
 import Products from "../components/Products"
