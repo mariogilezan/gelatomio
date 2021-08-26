@@ -1,4 +1,5 @@
 import React from "react"
+import ImageGallery from "../components/ImageGallery"
 import Layout from "../components/Layout"
 import Seo from "../components/Seo"
 
@@ -9,7 +10,7 @@ export default function Galerija({ location }) {
   return (
     <Layout location={location}>
       <Seo title={siteTitle} pathname={pathname} />
-      <h1>Galerija</h1>
+      <ImageGallery />
     </Layout>
   )
 }
