@@ -1,6 +1,9 @@
 require("dotenv").config()
 
 module.exports = {
+  flags: {
+    DEV_SSR: false,
+  },
   siteMetadata: {
     title: `Gelato`,
     description: `Zanatsko poslastičarska radnja "Gelato" osnovana je juna 1999. godine. Osnivač Đorđe Guga je želeo da "Gelato" bude mesto gde ćete probati najbolji italijanski sladoled proizveden u Srbiji.`,
@@ -13,41 +16,41 @@ module.exports = {
       },
       {
         name: `O Nama`,
-        slug: `/o-nama/`,
+        slug: `/o-nama`,
       },
       {
         name: `Proizvodi`,
-        slug: `/proizvodi/`,
+        slug: `/proizvodi`,
         subMenu: [
           {
             name: `Torte`,
-            slug: `/torte/`,
+            slug: `/torte`,
           },
           {
             name: `Kolači`,
-            slug: `/kolaci/`,
+            slug: `/kolaci`,
           },
           {
             name: `Macarons`,
-            slug: `/macarons/`,
+            slug: `/macarons`,
           },
           {
             name: `Sladoled`,
-            slug: `/sladoled/`,
+            slug: `/sladoled`,
           },
         ],
       },
       {
         name: `Cenovnik`,
-        slug: `/cenovnik/`,
+        slug: `/cenovnik`,
       },
       {
         name: `Galerija`,
-        slug: `/galerija/`,
+        slug: `/galerija`,
       },
       {
         name: `Kontakt`,
-        slug: `/kontakt/`,
+        slug: `/kontakt`,
       },
     ],
   },
