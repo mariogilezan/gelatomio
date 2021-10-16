@@ -8,7 +8,7 @@ import {
 } from "./Pricing.elements"
 import products from "./products"
 
-export default function PricingSection() {
+export default function PricingSection({ data }) {
   return (
     <PricingWrapper>
       <PricingHeading>Cenovnik</PricingHeading>
@@ -21,9 +21,9 @@ export default function PricingSection() {
           </tr>
         </PricingTableHeader>
         <PricingTableBody>
-          {products.map((product, index) => (
+          {data.map((product, index) => (
             <tr key={index}>
-              <td>{product.item}</td>
+              <td>{product.title}</td>
               <td>{product.amount}</td>
               <td>{product.price}</td>
             </tr>

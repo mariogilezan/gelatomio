@@ -1,5 +1,5 @@
 import React from "react"
-import { StaticImage } from "gatsby-plugin-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 import {
   ContactAddress,
   ContactContainer,
@@ -16,43 +16,59 @@ import {
   ContactWrapper,
 } from "./Contact.elements"
 
-export default function ContactSection() {
+export default function ContactSection({ data }) {
+  const {
+    title,
+    subtitle,
+    address,
+    phoneNumber,
+    mobileNumber,
+    ownerName,
+    ownerEmail,
+    managerName,
+    managerEmail,
+    contactImage,
+  } = data
+  const phoneNumberToHref = number => number.replace(/\D/gi, "")
   return (
     <ContactWrapper>
-      <ContactHeading>Kontakt</ContactHeading>
-      <ContactSubHeading>Gelato Mio</ContactSubHeading>
+      <ContactHeading>{title}</ContactHeading>
+      <ContactSubHeading>{subtitle}</ContactSubHeading>
       <ContactContainer>
         <ContactDescription>
-          <ContactAddress>
-            Adresa: Nikite Tolstoja 1 26300 Vršac, Srbija
-          </ContactAddress>
+          <ContactAddress>Adresa: {address}</ContactAddress>
           <ContactNumberOne>
-            Telefon: <ContactLink href="tel:013838065">013/838 065</ContactLink>
+            Telefon:{" "}
+            <ContactLink href={`tel:${phoneNumberToHref(phoneNumber)}`}>
+              {phoneNumber}
+            </ContactLink>
           </ContactNumberOne>
           <ContactNumberTwo>
-            Mobilni: <ContactLink href="tel:063608698">063/608 698</ContactLink>
+            Mobilni:{" "}
+            <ContactLink href={`tel:${phoneNumberToHref(mobileNumber)}`}>
+              {mobileNumber}
+            </ContactLink>
           </ContactNumberTwo>
         </ContactDescription>
         <ContactPeople>
           <ContactPerson>
-            Vlasnik: Nikola Guga{" "}
-            <ContactPersonEmail href="mailto:nikola.guga@gelatomio.rs">
-              nikola.guga@gelatomio.rs
+            Vlasnik: {ownerName}
+            <ContactPersonEmail href={`mailto:${ownerEmail}`}>
+              {ownerEmail}
             </ContactPersonEmail>
           </ContactPerson>
           <ContactPerson>
-            Poslovođa: Tatjana Guga{" "}
-            <ContactPersonEmail href="mailto:tatjanaguga@gmail.com">
-              tatjanaguga@gmail.com
+            Poslovođa: {managerName}
+            <ContactPersonEmail href={`mailto:${managerEmail}`}>
+              {managerEmail}
             </ContactPersonEmail>
           </ContactPerson>
         </ContactPeople>
       </ContactContainer>
       <ContactImageContainer>
-        <StaticImage
-          src="../../images/contact.jpg"
-          alt="cake hero image"
-          placeholder="blurred"
+        <GatsbyImage
+          image={contactImage.asset.gatsbyImageData}
+          alt={`${title} image`}
         />
       </ContactImageContainer>
     </ContactWrapper>

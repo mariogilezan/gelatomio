@@ -16,15 +16,6 @@ export const AboutHeading = styled.h1`
   }
 `
 
-export const AboutText = styled.p`
-  margin-top: 1rem;
-  text-align: justify;
-`
-
-export const BoldText = styled.strong`
-  font-weight: bold;
-`
-
 export const AboutFeatures = styled.ul`
   margin-top: 2rem;
   list-style: square inside;

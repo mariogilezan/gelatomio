@@ -20,6 +20,7 @@ import torte from "./torte"
 import kolaci from "./kolaci"
 import macarons from "./macarons"
 import sladoled from "./sladoled"
+import footer from "./footer"
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -40,6 +41,7 @@ export default createSchema({
     productsMenu,
     gallery,
     contact,
+    footer,
     // When added to this list, object types can be used as
     // { type: 'typename' } in other document schemas
     blockContent,

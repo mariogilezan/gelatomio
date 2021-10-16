@@ -12,7 +12,11 @@ import {
   SocialLink,
 } from "./FooterElements"
 
-export default function Footer() {
+export default function Footer({ data }) {
+  const { title, address, phoneNumber, mobileNumber } = data
+  const phoneNumberToHref = num => num.replace(/\D/gi, "")
+  const currentYear = new Date().getFullYear()
+
   return (
     <FooterWrapper>
       <FooterFeatures>
@@ -55,9 +59,14 @@ export default function Footer() {
       </FooterFeatures>
       <FooterContact>
         <Copyright>
-          &copy; 2021 Gelato Mio, Nikite Tolstoja 1, 26300 Vršac - Telefon:{" "}
-          <PhoneLink href="tel:013838065">013/838 065</PhoneLink>, Mobilni:{" "}
-          <PhoneLink href="tel:063608698">063/608 698</PhoneLink>
+          &copy; {currentYear} {title}, {address} - Telefon:{" "}
+          <PhoneLink href={`tel:${phoneNumberToHref(phoneNumber)}`}>
+            {phoneNumber}
+          </PhoneLink>
+          , Mobilni:{" "}
+          <PhoneLink href={`tel:${phoneNumberToHref(mobileNumber)}`}>
+            {mobileNumber}
+          </PhoneLink>
         </Copyright>
       </FooterContact>
     </FooterWrapper>

@@ -7,13 +7,14 @@ import {
   HeroImageContainer,
   HeroWrapper,
 } from "./HeroElements"
-import { StaticImage } from "gatsby-plugin-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 
-export default function Hero() {
+export default function Hero({ data }) {
+  const { title, heroImage } = data
   return (
     <HeroWrapper>
       <HeroDetailsContainer>
-        <HeroHeading>Naše majstorstvo za Vaše zadovoljstvo</HeroHeading>
+        <HeroHeading>{title}</HeroHeading>
         <HeroButtonsContainer>
           <HeroButton to="/cenovnik" redbgcolor="true" mr="true">
             Cenovnik
@@ -24,10 +25,9 @@ export default function Hero() {
         </HeroButtonsContainer>
       </HeroDetailsContainer>
       <HeroImageContainer>
-        <StaticImage
-          src="../../images/hero.jpg"
-          alt="cake hero image"
-          placeholder="blurred"
+        <GatsbyImage
+          image={heroImage.asset.gatsbyImageData}
+          alt="main hero image"
         />
       </HeroImageContainer>
     </HeroWrapper>
