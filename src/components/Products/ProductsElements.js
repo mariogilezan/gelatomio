@@ -2,14 +2,14 @@ import styled from "styled-components"
 import { Link } from "gatsby"
 
 export const ProductsWrapper = styled.section`
-  background-color: #f4f4f4;
+  background-color: ${({ theme }) => theme.color.grey};
   padding: 3rem 2rem;
 `
 
 export const ProductsHeading = styled.h2`
-  font-family: "Great Vibes", cursive;
+  font-family: ${({ theme }) => theme.font.headingFont};
   font-size: 2.6rem;
-  font-weight: normal;
+  font-weight: 400;
   margin-bottom: 2rem;
 
   @media screen and (max-width: 720px) {
@@ -29,8 +29,8 @@ export const ProductCardsContainer = styled.div`
 
 export const ProductCard = styled(Link)`
   text-decoration: none;
+  background-color: ${({ theme }) => theme.color.light};
   color: inherit;
-  background-color: #fff;
   display: grid;
   grid-template-rows: 12.5rem 3rem 6rem;
   justify-items: center;
@@ -55,7 +55,7 @@ export const ProductCardImageContainer = styled.div`
 
 export const ProductCardHeading = styled.h4`
   align-self: center;
-  color: #f00;
+  color: ${({ theme }) => theme.color.primary};
   font-size: 1.15rem;
 `
 

@@ -1,20 +1,11 @@
 import styled from "styled-components"
+import { Heading, SectionWrapper } from "../../styles/globalStyles"
 
-export const PricingWrapper = styled.section`
-  padding: 3rem 0;
-`
+export const PricingWrapper = styled(SectionWrapper)``
 
-export const PricingHeading = styled.h1`
-  font-family: "Great Vibes", cursive;
-  font-size: 3.6rem;
-  font-weight: normal;
+export const PricingHeading = styled(Heading)`
   text-align: center;
-  margin-top: 0;
   margin-bottom: 2rem;
-
-  @media screen and (max-width: 520px) {
-    font-size: 2.6rem;
-  }
 `
 
 export const PricingTable = styled.table`
@@ -44,8 +35,8 @@ export const PricingTable = styled.table`
 export const PricingTableHeader = styled.thead`
   tr {
     height: 4rem;
-    background-color: #2f4858;
-    color: #fff;
+    background-color: ${({ theme }) => theme.color.secondaryDark};
+    color: ${({ theme }) => theme.color.light};
   }
 `
 
@@ -57,9 +48,9 @@ export const PricingTableBody = styled.tbody`
     }
   }
   tr:nth-child(even) {
-    background-color: #effbff;
+    background-color: ${({ theme }) => theme.color.secondaryLight};
   }
   tr:hover {
-    background-color: #effbff;
+    background-color: ${({ theme }) => theme.color.secondaryLight};
   }
 `

@@ -1,24 +1,13 @@
 import styled from "styled-components"
+import { Heading, SectionWrapper, Subheading } from "../../styles/globalStyles"
 
-export const ContactWrapper = styled.section`
-  padding: 3rem 0;
-`
+export const ContactWrapper = styled(SectionWrapper)``
 
-export const ContactHeading = styled.h1`
-  font-family: "Great Vibes", cursive;
-  font-size: 3.6rem;
-  font-weight: normal;
-  margin-top: 0;
+export const ContactHeading = styled(Heading)`
   margin-bottom: 2rem;
-
-  @media screen and (max-width: 520px) {
-    font-size: 2.6rem;
-  }
 `
 
-export const ContactSubHeading = styled.h3`
-  margin-bottom: 1rem;
-`
+export const ContactSubHeading = styled(Subheading)``
 
 export const ContactContainer = styled.div`
   display: flex;
@@ -51,12 +40,12 @@ export const ContactPerson = styled.p`
 `
 
 export const ContactLink = styled.a`
+  color: ${({ theme }) => theme.color.primary};
   display: inline-block;
-  color: #f00;
   cursor: pointer;
   transition: color 0.25s;
   &:hover {
-    color: #b80000;
+    color: ${({ theme }) => theme.color.primaryDark};
   }
 `
 
@@ -66,8 +55,4 @@ export const ContactPersonEmail = styled(ContactLink)`
 
 export const ContactImageContainer = styled.div`
   margin-top: 2rem;
-  img {
-    width: 100%;
-    height: 100%;
-  }
 `

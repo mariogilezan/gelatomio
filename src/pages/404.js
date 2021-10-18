@@ -3,6 +3,7 @@ import { Link } from "gatsby"
 import styled from "styled-components"
 import Layout from "../components/Layout"
 import Seo from "../components/Seo"
+import { Heading } from "../styles/globalStyles"
 
 const NotFoundWrapper = styled.div`
   width: 100%;
@@ -13,10 +14,10 @@ const NotFoundWrapper = styled.div`
   text-align: center;
 `
 
-const Heading = styled.h1`
-  font-family: "Great Vibes", cursive;
+const NotFoundHeading = styled(Heading)`
+  color: ${({ theme }) => theme.color.primary};
   font-size: 7rem;
-  color: #f00;
+  font-weight: bold;
   margin: 0;
 `
 
@@ -34,17 +35,17 @@ const Text = styled.p`
 `
 
 const HomeLink = styled(Link)`
+  background-color: ${({ theme }) => theme.color.primary};
+  color: ${({ theme }) => theme.color.light};
+  border: 2px solid ${({ theme }) => theme.color.primary};
+  border-radius: 10rem;
   display: inline-block;
   text-decoration: none;
   font-weight: bold;
-  color: #fff;
-  background-color: #f00;
-  border-radius: 10rem;
-  border: 2px solid #f00;
   padding: 0.2rem 1rem;
   &:hover {
-    background-color: #fff;
-    color: #f00;
+    background-color: ${({ theme }) => theme.color.light};
+    color: ${({ theme }) => theme.color.primary};
   }
 `
 
@@ -55,7 +56,7 @@ export default function NotFound({ location }) {
     <Layout location={location}>
       <Seo title={siteTitle} />
       <NotFoundWrapper>
-        <Heading>404</Heading>
+        <NotFoundHeading>404</NotFoundHeading>
         <SubHeading>{siteTitle}</SubHeading>
         <Text>Vrati se na:</Text>
         <HomeLink to="/">Početnu stranicu</HomeLink>

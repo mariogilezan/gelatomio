@@ -14,7 +14,7 @@ import {
   ContactPersonEmail,
   ContactSubHeading,
   ContactWrapper,
-} from "./Contact.elements"
+} from "./ContactElements"
 
 export default function ContactSection({ data }) {
   const {

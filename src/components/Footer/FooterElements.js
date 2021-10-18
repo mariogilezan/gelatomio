@@ -31,9 +31,9 @@ export const FeatureCard = styled.div`
   }
 `
 export const FeatureHeading = styled.h2`
-  font-family: "Great Vibes", cursive;
+  font-family: ${({ theme }) => theme.font.headingFont};
   font-size: 2.25rem;
-  font-weight: normal;
+  font-weight: bold;
   margin-bottom: 1.5rem;
   @media screen and (max-width: 720px) {
     margin-bottom: 1rem;
@@ -49,7 +49,7 @@ export const FeatureSocials = styled.div`
 `
 
 export const SocialLink = styled(SocialIcon)`
-  margin-right: ${props => props.mr && "0.7rem"};
+  margin-right: ${({ mr }) => mr && "0.7rem"};
   transition: transform 0.25s;
   &:hover {
     transform: rotate(360deg) scale(1.1);
@@ -57,12 +57,11 @@ export const SocialLink = styled(SocialIcon)`
 `
 
 export const FooterContact = styled(Container)`
-  background: #2f4858;
-  color: #fefefe;
+  background: ${({ theme }) => theme.color.secondaryDark};
+  color: ${({ theme }) => theme.color.light};
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
   max-width: 100%;
-  ${Container}
 `
 
 export const Copyright = styled.p`
@@ -71,9 +70,9 @@ export const Copyright = styled.p`
 `
 
 export const PhoneLink = styled.a`
-  color: #f00;
+  color: ${({ theme }) => theme.color.primary};
   transition: color 0.25s;
   &:hover {
-    color: #b80000;
+    color: ${({ theme }) => theme.color.primaryDark};
   }
 `

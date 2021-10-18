@@ -7,7 +7,7 @@ import {
   AboutHeading,
   AboutImageContainer,
   AboutWrapper,
-} from "./About.elements"
+} from "./AboutElements"
 
 export default function AboutSection({ data }) {
   const { title, _rawContent, features, aboutImage } = data

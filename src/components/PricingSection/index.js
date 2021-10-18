@@ -5,8 +5,7 @@ import {
   PricingTableBody,
   PricingTableHeader,
   PricingWrapper,
-} from "./Pricing.elements"
-import products from "./products"
+} from "./PricingElements"
 
 export default function PricingSection({ data }) {
   return (

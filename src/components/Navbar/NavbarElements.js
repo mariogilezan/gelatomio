@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 import { Container } from "../../styles/globalStyles"
 
 export const Nav = styled.nav`
-  background: #fefefe;
+  background: ${({ theme }) => theme.color.light};
   height: 60px;
   display: flex;
   align-items: center;
@@ -18,8 +18,6 @@ export const NavContainer = styled(Container)`
   display: flex;
   align-items: center;
   justify-content: space-between;
-
-  ${Container}
 `
 
 export const Logo = styled(Link)`
@@ -56,7 +54,7 @@ export const NavLink = styled(Link)`
   cursor: pointer;
   transition: border-color 0.25s;
   &:hover {
-    border-color: #f00;
+    border-color: ${({ theme }) => theme.color.primary};
   }
 `
 
@@ -69,7 +67,7 @@ export const NavLinkDropdown = styled.a`
   cursor: pointer;
   transition: border-color 0.25s;
   &:hover {
-    border-color: #f00;
+    border-color: ${({ theme }) => theme.color.primary};
   }
   &:hover + ul,
   &:focus-within + ul {
@@ -82,7 +80,7 @@ export const NavLinkDropdown = styled.a`
     position: absolute;
     top: 6px;
     right: -12px;
-    border: solid #222;
+    border: solid ${({ theme }) => theme.color.dark};
     border-width: 0 2px 2px 0;
     padding: 3px;
     transform: rotate(45deg);
@@ -92,12 +90,13 @@ export const NavLinkDropdown = styled.a`
 export const NavListSubMenu = styled.ul`
   list-style: none;
   min-width: 8rem;
-  background-color: #fff;
+  background-color: ${({ theme }) => theme.color.light};
   padding: 1rem;
   position: absolute;
   left: -1.8rem;
   flex-direction: column;
   align-items: center;
+  text-align: center;
   gap: 1.5rem;
   border-radius: 0.3rem;
   box-shadow: 1.5px 1.5px 3px rgba(0, 0, 0, 0.2);
@@ -110,5 +109,12 @@ export const NavListSubMenu = styled.ul`
     display: flex;
     visibility: visible;
     opacity: 1;
+  }
+  li {
+    width: 100%;
+  }
+  a {
+    display: inline-block;
+    width: 80%;
   }
 `
