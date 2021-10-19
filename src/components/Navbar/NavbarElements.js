@@ -38,7 +38,25 @@ export const NavList = styled.ul`
   align-items: center;
   justify-content: space-between;
   @media screen and (max-width: 800px) {
-    display: none;
+    background: ${({ theme }) => theme.color.light};
+    position: absolute;
+    top: ${({ open }) => (open ? "0" : "-100vh")};
+    opacity: ${({ open }) => (open ? "1" : "0")};
+    right: 0;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 70vh;
+    width: 50vw;
+    border-radius: 0.3rem;
+    box-shadow: 0 0 0.8rem 0.4rem rgba(0, 0, 0, 0.2);
+    transition: all 0.6s ease-in-out;
+  }
+  @media screen and (max-width: 600px) {
+    height: 70vh;
+    width: 70vw;
+  }
+  @media screen and (max-height: 450px) {
+    height: 100vh;
   }
 `
 
@@ -47,7 +65,7 @@ export const NavItem = styled.li`
 `
 
 export const NavLink = styled(Link)`
-  color: #222;
+  color: ${({ theme }) => theme.color.dark};
   text-decoration: none;
   border-bottom: 4px solid transparent;
   padding-bottom: 2px;
@@ -60,7 +78,7 @@ export const NavLink = styled(Link)`
 
 export const NavLinkDropdown = styled.a`
   position: relative;
-  color: #222;
+  color: ${({ theme }) => theme.color.dark};
   text-decoration: none;
   border-bottom: 4px solid transparent;
   padding-bottom: 2px;
@@ -74,6 +92,7 @@ export const NavLinkDropdown = styled.a`
     display: flex;
     visibility: visible;
     opacity: 1;
+    z-index: 999;
   }
   &::before {
     content: "";
@@ -99,7 +118,7 @@ export const NavListSubMenu = styled.ul`
   text-align: center;
   gap: 1.5rem;
   border-radius: 0.3rem;
-  box-shadow: 1.5px 1.5px 3px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 0.8rem 0.2rem rgba(0, 0, 0, 0.2);
   display: none;
   visibility: hidden;
   opacity: 0;
@@ -109,6 +128,7 @@ export const NavListSubMenu = styled.ul`
     display: flex;
     visibility: visible;
     opacity: 1;
+    z-index: 999;
   }
   li {
     width: 100%;
@@ -116,5 +136,8 @@ export const NavListSubMenu = styled.ul`
   a {
     display: inline-block;
     width: 80%;
+  }
+  @media screen and (max-height: 450px) {
+    gap: 1rem;
   }
 `
