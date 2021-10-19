@@ -8,7 +8,6 @@ import {
 } from "./KolaciElements"
 
 export default function KolaciSection({ data }) {
-  console.log(data)
   return (
     <KolaciWrapper>
       {data &&

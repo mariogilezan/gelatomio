@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React from "react"
 import { StaticImage } from "gatsby-plugin-image"
 import {
   Logo,
@@ -12,11 +12,10 @@ import {
 } from "./NavbarElements"
 import { useSiteMetadata } from "../../hooks/useSiteMetadata"
 import HamburgerMenu from "../HamburgerMenu"
+import MobileMenu from "../MobileMenu"
 
-export default function Navbar() {
+export default function Navbar({ isOpen, toggle }) {
   const { menuLinks } = useSiteMetadata()
-  const [open, setOpen] = useState(false)
-  const toggle = () => setOpen(!open)
   return (
     <>
       <Nav>
@@ -28,7 +27,7 @@ export default function Navbar() {
               placeholder="blurred"
             />
           </Logo>
-          <NavList open={open}>
+          <NavList>
             {menuLinks.map(link => (
               <NavItem key={link.name}>
                 {link.name !== "Proizvodi" ? (
@@ -61,7 +60,8 @@ export default function Navbar() {
               </NavItem>
             ))}
           </NavList>
-          <HamburgerMenu open={open} toggle={toggle} />
+          <MobileMenu isOpen={isOpen} toggle={toggle} />
+          <HamburgerMenu isOpen={isOpen} toggle={toggle} />
         </NavContainer>
       </Nav>
     </>

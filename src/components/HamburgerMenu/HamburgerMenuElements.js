@@ -24,20 +24,20 @@ export const Hamburger = styled.div`
   width: 100%;
   height: 100%;
   span {
-    width: ${({ open }) => (open ? "0%" : "30px")};
+    width: ${({ isOpen }) => (isOpen ? "0%" : "30px")};
     height: 3px;
     position: relative;
     top: 5px;
     left: 5px;
     margin: 5px 0;
     &:nth-child(1) {
-      transition-delay: ${({ open }) => (open ? "0s" : "0.5s")};
+      transition-delay: ${({ isOpen }) => (isOpen ? "0s" : "0.5s")};
     }
     &:nth-child(2) {
-      transition-delay: ${({ open }) => (open ? "0.125s" : "0.625s")};
+      transition-delay: ${({ isOpen }) => (isOpen ? "0.125s" : "0.625s")};
     }
     &:nth-child(3) {
-      transition-delay: ${({ open }) => (open ? "0.25s" : "0.75s")};
+      transition-delay: ${({ isOpen }) => (isOpen ? "0.25s" : "0.75s")};
     }
   }
 `
@@ -49,21 +49,21 @@ export const Cross = styled.div`
   transform: rotate(45deg);
   span {
     &:nth-child(1) {
-      height: ${({ open }) => (open ? "80%" : "0%")};
+      height: ${({ isOpen }) => (isOpen ? "80%" : "0%")};
       width: 3px;
       position: absolute;
       top: 10%;
       left: 19px;
-      transition-delay: ${({ open }) => (open ? "0.625s" : "0s")};
+      transition-delay: ${({ isOpen }) => (isOpen ? "0.625s" : "0s")};
     }
     &:nth-child(2) {
       width: 0%;
-      width: ${({ open }) => (open ? "80%" : "0%")};
+      width: ${({ isOpen }) => (isOpen ? "80%" : "0%")};
       height: 3px;
       position: absolute;
       left: 10%;
       top: 19px;
-      transition-delay: ${({ open }) => (open ? "0.375s" : "0.25s")};
+      transition-delay: ${({ isOpen }) => (isOpen ? "0.375s" : "0.25s")};
     }
   }
 `

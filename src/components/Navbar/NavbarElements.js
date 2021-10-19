@@ -38,25 +38,7 @@ export const NavList = styled.ul`
   align-items: center;
   justify-content: space-between;
   @media screen and (max-width: 800px) {
-    background: ${({ theme }) => theme.color.light};
-    position: absolute;
-    top: ${({ open }) => (open ? "0" : "-100vh")};
-    opacity: ${({ open }) => (open ? "1" : "0")};
-    right: 0;
-    flex-direction: column;
-    justify-content: space-evenly;
-    height: 70vh;
-    width: 50vw;
-    border-radius: 0.3rem;
-    box-shadow: 0 0 0.8rem 0.4rem rgba(0, 0, 0, 0.2);
-    transition: all 0.6s ease-in-out;
-  }
-  @media screen and (max-width: 600px) {
-    height: 70vh;
-    width: 70vw;
-  }
-  @media screen and (max-height: 450px) {
-    height: 100vh;
+    display: none;
   }
 `
 

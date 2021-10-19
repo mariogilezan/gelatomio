@@ -9,7 +9,6 @@ import {
 
 export default function MacaronsSection({ data }) {
   const { title, imageGallery, subtitle, macaronsImage } = data
-  console.log(data)
   return (
     <MacaronsWrapper>
       <MacaronsHeading>{title}</MacaronsHeading>

@@ -8,7 +8,6 @@ import {
 
 export default function SladoledSection({ data }) {
   const { title, imageGallery, imageOne, imageTwo } = data
-  console.log(data)
   return (
     <SladoledWrapper>
       <SladoledHeading>{title}</SladoledHeading>

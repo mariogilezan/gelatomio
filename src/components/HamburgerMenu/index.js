@@ -6,16 +6,16 @@ import {
   Line,
 } from "./HamburgerMenuElements"
 
-export default function HamburgerMenu({ open, toggle }) {
+export default function HamburgerMenu({ isOpen, toggle }) {
   return (
     <>
       <HamburgerMenuWrapper onClick={toggle}>
-        <Hamburger open={open}>
+        <Hamburger isOpen={isOpen}>
           <Line />
           <Line />
           <Line />
         </Hamburger>
-        <Cross open={open}>
+        <Cross isOpen={isOpen}>
           <Line />
           <Line />
         </Cross>
