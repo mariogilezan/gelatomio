@@ -23,9 +23,15 @@ export default function Layout({ location, children }) {
   `)
   const footerData = data.allSanityFooter.nodes[0]
   const [isOpen, setIsOpen] = useState(false)
+  const [isReady, setIsReady] = useState(false)
   const toggle = () => setIsOpen(!isOpen)
   const wrapperRef = useRef(null)
   const footerRef = useRef(null)
+
+  // check if page is ready and prevent font flicker on page reload
+  useEffect(() => {
+    document.fonts.load("12px Great Vibes").then(() => setIsReady(true))
+  }, [])
 
   // close mobile menu on page click
   useEffect(() => {
@@ -47,15 +53,17 @@ export default function Layout({ location, children }) {
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyle />
-      <>
-        <Navbar isOpen={isOpen} toggle={toggle} />
-        <Wrapper ref={wrapperRef} data-is-root-path={isRootPath}>
-          <Content>{children}</Content>
-        </Wrapper>
-        <div ref={footerRef}>
-          <Footer data={footerData} />
-        </div>
-      </>
+      {isReady && (
+        <>
+          <Navbar isOpen={isOpen} toggle={toggle} />
+          <Wrapper ref={wrapperRef} data-is-root-path={isRootPath}>
+            <Content>{children}</Content>
+          </Wrapper>
+          <div ref={footerRef}>
+            <Footer data={footerData} />
+          </div>
+        </>
+      )}
     </ThemeProvider>
   )
 }
