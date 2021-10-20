@@ -24,10 +24,10 @@ export const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-display: block;
   }
   body {
     font-family: ${({ theme }) => theme.font.pageFont};
+    font-display: block;
     background: ${({ theme }) => theme.color.light};
     color: ${({ theme }) => theme.color.dark};
   }
