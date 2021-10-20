@@ -24,9 +24,10 @@ export const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-display: swap;
   }
   body {
-    font-family: 'Open Sans', sans-serif;
+    font-family: ${({ theme }) => theme.font.pageFont};
     background: ${({ theme }) => theme.color.light};
     color: ${({ theme }) => theme.color.dark};
   }
