@@ -24,12 +24,16 @@ export default function Layout({ location, children }) {
   const footerData = data.allSanityFooter.nodes[0]
   const [isOpen, setIsOpen] = useState(false)
   const toggle = () => setIsOpen(!isOpen)
-  const wrapperRef = useRef()
+  const wrapperRef = useRef(null)
+  const footerRef = useRef(null)
 
   // close mobile menu on page click
   useEffect(() => {
     const clickHandler = e => {
-      if (wrapperRef.current && wrapperRef.current.contains(e.target)) {
+      if (
+        (wrapperRef.current && wrapperRef.current.contains(e.target)) ||
+        (footerRef.current && footerRef.current.contains(e.target))
+      ) {
         setIsOpen(false)
       }
     }
@@ -48,7 +52,9 @@ export default function Layout({ location, children }) {
         <Wrapper ref={wrapperRef} data-is-root-path={isRootPath}>
           <Content>{children}</Content>
         </Wrapper>
-        <Footer data={footerData} />
+        <div ref={footerRef}>
+          <Footer data={footerData} />
+        </div>
       </>
     </ThemeProvider>
   )

@@ -13,13 +13,14 @@ export default function MobileMenu({ isOpen, toggle }) {
 
   return (
     <>
-      <MobileMenuList isOpen={isOpen} onClick={toggle}>
+      <MobileMenuList isOpen={isOpen}>
         {menuLinks.map(link => (
           <MobileMenuItem key={link.name}>
             {link.name !== "Proizvodi" ? (
               <MobileMenuLink
                 to={link.slug}
                 activeStyle={{ borderColor: "#f00" }}
+                onClick={toggle}
               >
                 {link.name}
               </MobileMenuLink>
@@ -39,6 +40,7 @@ export default function MobileMenu({ isOpen, toggle }) {
                     <MobileMenuLink
                       to={subLink.slug}
                       activeStyle={{ borderColor: "#f00" }}
+                      onClick={toggle}
                     >
                       {subLink.name}
                     </MobileMenuLink>
