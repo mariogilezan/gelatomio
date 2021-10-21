@@ -7,8 +7,18 @@ module.exports = {
   siteMetadata: {
     title: `Gelato`,
     description: `Zanatsko poslastičarska radnja "Gelato" osnovana je juna 1999. godine. Osnivač Đorđe Guga je želeo da "Gelato" bude mesto gde ćete probati najbolji italijanski sladoled proizveden u Srbiji.`,
-    keywords: ["gelato", "vrsac"],
-    siteUrl: `http://localhost:8000/`,
+    keywords: [
+      "gelato",
+      "gelatomio",
+      "torte",
+      "kolači",
+      "kolaci",
+      "macarons",
+      "sladoled",
+      "vršac",
+      "vrsac",
+    ],
+    siteUrl: `https://gelatomio.netlify.app/`,
     menuLinks: [
       {
         name: `Početna`,
