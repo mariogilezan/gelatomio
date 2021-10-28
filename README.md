@@ -1,7 +1,7 @@
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 <p align="center">
   <a href="https://www.gatsbyjs.com">
-    <img alt="Gatsby" src="./src/images/logo.png" width="100" />
+    <img alt="gelato mio logo" src="./src/images/logo.png" width="100" />
   </a>
 </p>
 <h1 align="center">
@@ -21,6 +21,6 @@ Gelato Mio is a template landing page built for cake/bakery stores. I used [Gats
 
 ## 📝 License
 
-[MIT](https://choosealicense.com/licenses/mit/)
+_0BSD_
 
 <!-- AUTO-GENERATED-CONTENT:END -->
