@@ -3,7 +3,7 @@
   "private": true,
   "description": "Gelatomio je zvanična web stranica zanatsko poslastičarske radnje Gelato",
   "version": "1.0.0",
-  "license": "0BSD",
+  "license": "MIT",
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
