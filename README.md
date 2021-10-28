@@ -8,7 +8,7 @@
   Gelato Mio
 </h1>
 
-Gelato Mio is a template landing page built for cake/bakery stores. I used [GatsbyJS](https://www.gatsbyjs.com/) for frontend and for content management I went for [Sanity](https://www.sanity.io/).
+Gelato Mio is a template landing page built for cake/bakery stores. I used [GatsbyJS](https://www.gatsbyjs.com/) on the frontend and for content management I went with [Sanity](https://www.sanity.io/).
 
 ## 💻 Stacks & Tools:
 
