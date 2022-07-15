@@ -1,6 +1,6 @@
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 <p align="center">
-  <a href="https://www.gatsbyjs.com">
+  <a href="https://gelatomio.netlify.app/">
     <img alt="gelato mio logo" src="./src/images/logo.png" width="100" />
   </a>
 </p>
@@ -12,12 +12,12 @@ Gelato Mio is a template landing page built for cake/bakery stores. I used [Gats
 
 ## 💻 Stacks & Tools:
 
-- GatsbyJS
-- GraphQL
-- styled-components
-- Sanity
-- Netlify
-- VS Code
+- [GatsbyJS](https://www.gatsbyjs.com/)
+- [GraphQL](https://graphql.org/)
+- [styled-components](https://styled-components.com/)
+- [Sanity](https://www.sanity.io/)
+- [Netlify](https://www.netlify.com/)
+- [VS Code](https://code.visualstudio.com/)
 
 ## 📝 License
 
