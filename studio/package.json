@@ -1,31 +1,25 @@
 {
   "name": "gelatomiostudio",
   "private": true,
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "",
   "main": "package.json",
   "author": "Mario Gilezan <mariogilezan10@gmail.com>",
   "license": "UNLICENSED",
   "scripts": {
     "start": "sanity start",
-    "build": "sanity build"
+    "build": "sanity build",
+    "dev": "sanity dev"
   },
   "keywords": [
     "sanity"
   ],
   "dependencies": {
-    "@sanity/base": "^2.21.3",
-    "@sanity/components": "^2.14.0",
-    "@sanity/core": "^2.21.3",
-    "@sanity/default-layout": "^2.21.3",
-    "@sanity/default-login": "^2.21.3",
-    "@sanity/desk-tool": "^2.21.3",
-    "@sanity/vision": "^2.21.3",
-    "prop-types": "^15.7",
-    "react": "^17.0",
-    "react-dom": "^17.0",
-    "sanity-plugin-dark-theme-blue": "^1.0.1",
-    "styled-components": "^5.3.1"
-  },
-  "devDependencies": {}
+    "@sanity/vision": "^3.19.1",
+    "prop-types": "^15.8.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "sanity": "^3.19.1",
+    "styled-components": "^5.3.11"
+  }
 }
